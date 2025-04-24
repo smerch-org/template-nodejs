@@ -1,56 +1,65 @@
-# Conventional Commits Documentation
+# Node.js Project Template
 
-This project follows the [Conventional Commits](https://www.conventionalcommits.org/) specification for commit messages. This helps maintain a clear and consistent commit history, making it easier to understand the purpose of each change.
+Welcome to our Node.js project! This template follows modern development practices and conventions to ensure code quality and maintainability.
 
-## Commit Message Format
+## Quick Start
 
-Each commit message consists of a **type**, an optional **scope**, and a **description**:
+1. Clone the repository
 
-```text
-<type>(<scope>): <description>
-```
+   ```bash
+   git clone https://github.com/smerch-org/template-nodejs.git
+   ```
 
-### Types
+2. Install dependencies:
 
-- **feat**: A new feature
-- **fix**: A bug fix
-- **docs**: Documentation only changes
-- **style**: Changes that do not affect the meaning of the code (white-space, formatting, etc)
-- **refactor**: A code change that neither fixes a bug nor adds a feature
-- **perf**: A code change that improves performance
-- **test**: Adding missing tests or correcting existing tests
-- **build**: Changes that affect the build system or external dependencies
-- **ci**: Changes to CI configuration files and scripts
-- **chore**: Changes to the build process or auxiliary tools and libraries
-- **revert**: Reverts a previous commit
+   ```bash
+   npm install
+   ```
 
-### Scopes
+3. Start the development server:
 
-The scope is optional and can be anything specifying the place of the commit change. For example:
+   ```bash
+   npm start
+   ```
 
-- `feat(api)`: New API feature
-- `fix(ui)`: UI bug fix
-- `docs(readme)`: Documentation changes in README
-
-### Description
-
-The description should be:
-
-- Written in the imperative mood ("Add feature" not "Added feature")
-- Start with a capital letter
-- Not end with a period
-- Be concise but descriptive
-
-## Examples
+## Project Structure
 
 ```text
-feat(auth): add OAuth2 authentication
-fix(api): handle null response from external service
-docs(readme): update installation instructions
-style: format code according to ESLint rules
-refactor(utils): extract common functions into separate module
+.
+├── src/               # Source code
+├── tests/            # Test files
+├── docs/             # Documentation
+├── .husky/           # Git hooks
+└── package.json      # Project configuration
 ```
 
-## Validation
+## Development Guidelines
 
-Commit messages are automatically validated using [Husky](https://github.com/typicode/husky) and [commitlint](https://github.com/conventional-changelog/commitlint). If your commit message doesn't follow the convention, the commit will be rejected
+### For New Team Members
+
+If you're new to the project, please read these documents in order:
+
+1. [Development Workflow (GitFlow)](docs/gitflow.md) - Learn how we manage code changes
+2. [Commit Message Convention](docs/conventional-commits.md) - Learn how to write commit messages
+
+### Key Points
+
+- All code changes must follow our [commit message convention](docs/conventional-commits.md)
+- Development follows [GitFlow](docs/gitflow.md) branching model
+- All commits are automatically validated for:
+  - Commit message format
+  - Branch name format
+  - Code style and quality
+
+## Contributing
+
+1. Create a new branch following our [branch naming convention](docs/gitflow.md#branch-naming-rules)
+2. Make your changes
+3. Write commit messages following our [commit convention](docs/conventional-commits.md#commit-message-format)
+4. Create a Pull Request
+
+## Need Help?
+
+- Check our [documentation](docs/)
+- Ask in the team chat
+- Contact the project maintainers
