@@ -11,7 +11,7 @@ This guide explains our development workflow based on GitFlow. It's designed to 
 
 ## Branch Overview
 
-### Main Branches
+### Core Branches
 
 | Branch   | Purpose                                                                 |
 |----------|-------------------------------------------------------------------------|
@@ -125,6 +125,8 @@ We use automated tools to ensure code quality:
 | Coverage              | Jest           | Ensures adequate test coverage             |
 
 ## Common Issues and Solutions
+
+### Branch is Out of Date
 
 ```bash
 git switch develop
