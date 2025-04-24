@@ -10,7 +10,7 @@ if [ "$BRANCH_NAME" = "main" ] || [ "$BRANCH_NAME" = "develop" ]; then
 fi
 
 # Regular expression for branch name format
-if ! echo "$BRANCH_NAME" | grep -qE "^(feature|bugfix|hotfix|release)/[0-9]+/[a-z0-9-]+$"; then
+if ! echo "$BRANCH_NAME" | grep -qE "^(feature|bugfix|hotfix|chore|release)/[0-9]+/[a-z0-9-]+$"; then
   echo "Error: Invalid branch name format!"
   echo "Correct format examples:"
   echo "feature/1234/add-new-feature"
