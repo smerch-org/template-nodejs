@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Get current branch name
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+
+# Skip check for main and develop branches
+if [ "$BRANCH_NAME" = "main" ] || [ "$BRANCH_NAME" = "develop" ]; then
+  exit 0
+fi
+
+# Regular expression for branch name format
+if ! echo "$BRANCH_NAME" | grep -qE "^(feature|bugfix|hotfix|release)/[0-9]+/[a-z0-9-]+$"; then
+  echo "Error: Invalid branch name format!"
+  echo "Correct format examples:"
+  echo "feature/1234/add-new-feature"
+  echo "bugfix/23/fix-login-issue"
+  echo "hotfix/1235/critical-security-fix"
+  echo "release/1236/prepare-release"
+  echo ""
+  echo "Current branch name: $BRANCH_NAME"
+  exit 1
+fi 
