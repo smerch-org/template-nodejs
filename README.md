@@ -6,7 +6,7 @@ This project follows the [Conventional Commits](https://www.conventionalcommits.
 
 Each commit message consists of a **type**, an optional **scope**, and a **description**:
 
-```
+```text
 <type>(<scope>): <description>
 ```
 
@@ -27,6 +27,7 @@ Each commit message consists of a **type**, an optional **scope**, and a **descr
 ### Scopes
 
 The scope is optional and can be anything specifying the place of the commit change. For example:
+
 - `feat(api)`: New API feature
 - `fix(ui)`: UI bug fix
 - `docs(readme)`: Documentation changes in README
@@ -34,6 +35,7 @@ The scope is optional and can be anything specifying the place of the commit cha
 ### Description
 
 The description should be:
+
 - Written in the imperative mood ("Add feature" not "Added feature")
 - Start with a capital letter
 - Not end with a period
@@ -41,7 +43,7 @@ The description should be:
 
 ## Examples
 
-```
+```text
 feat(auth): add OAuth2 authentication
 fix(api): handle null response from external service
 docs(readme): update installation instructions
@@ -51,4 +53,4 @@ refactor(utils): extract common functions into separate module
 
 ## Validation
 
-Commit messages are automatically validated using [Husky](https://github.com/typicode/husky) and [commitlint](https://github.com/conventional-changelog/commitlint). If your commit message doesn't follow the convention, the commit will be rejected. 
+Commit messages are automatically validated using [Husky](https://github.com/typicode/husky) and [commitlint](https://github.com/conventional-changelog/commitlint). If your commit message doesn't follow the convention, the commit will be rejected
