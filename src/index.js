@@ -1,6 +1,6 @@
 const http = require("http");
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 const server = http.createServer((req, res) => {
   if (req.url === "/") {
