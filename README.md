@@ -26,7 +26,7 @@ Welcome to our Node.js project! This template follows modern development practic
 
 ```text
 .
-├── src/               # Source code
+├── src/              # Source code
 ├── tests/            # Test files
 ├── docs/             # Documentation
 ├── .husky/           # Git hooks
